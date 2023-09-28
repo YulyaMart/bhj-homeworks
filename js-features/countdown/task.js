@@ -1,7 +1,7 @@
 const timer = document.getElementById('timer')
-setInterval ( () => {
+let timerId = setInterval ( () => {
     if (timer.textContent == 0) {
-        clearInterval(timer);
+        clearInterval(timerId);
         alert("Вы победили в конкурсе!")
     } else {timer.textContent = Number(timer.textContent) - 1} 
 }, 1000)
